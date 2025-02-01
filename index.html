@@ -5,8 +5,277 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Company</title>
     <link rel="stylesheet" href="./public/css/main.css">
+    <style>
+        .carousel-container {
+          position: relative;
+          width: 100%;
+          max-width: 800px;
+          margin: 0 auto;
+          overflow: hidden;
+        }
+        
+        .carousel {
+          display: flex;
+          transition: transform 0.5s ease-in-out;
+        }
+        
+        .carousel-item {
+          flex: 0 0 100%;
+          display: none;
+        }
+        
+        .carousel-item.is-active {
+          display: block;
+        }
+        
+        .carousel-nav {
+          position: absolute;
+          bottom: 20px;
+          left: 0;
+          right: 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 1rem;
+        }
+        
+        .nav-item {
+          background: rgba(255, 255, 255, 0.7);
+          border-radius: 50%;
+          width: 40px;
+          height: 40px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          transition: background-color 0.3s;
+        }
+        
+        .nav-item:hover {
+          background: rgba(255, 255, 255, 0.9);
+        }
+        
+        .nav-indicators {
+          display: flex;
+          gap: 0.5rem;
+        }
+        
+        .indicator {
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          background: rgba(255, 255, 255, 0.5);
+          cursor: pointer;
+        }
+        
+        .indicator.is-active {
+          background: white;
+        }
+        </style>
 </head>
 <body>
-    <h1 class="is-size-3">Hello, Jesse!</h1>
+    <header class="navbar is-fixed-top py-4" style="background-color: antiquewhite;">
+        <div class="container">
+          <div class="navbar-brand">
+            <a href="index.html" class="navbar-item">
+              <!-- Uncomment the line below if you also wish to use an image logo -->
+              <!-- <img src="assets/img/logo.png" alt=""> -->
+              <h1 class="title is-4 mb-0 is-uppercase">Company<span>.</span></h1>
+            </a>
+      
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+            </a>
+          </div>
+      
+          <div class="navbar-menu is-uppercase">
+            <div class="navbar-start">
+              
+            </div>
+      
+            <div class="navbar-end">
+                <a href="#hero" class="navbar-item is-active">Home</a>
+              
+              <div class="navbar-item has-dropdown is-hoverable">
+                <a href="about.html" class="navbar-link">
+                  About
+                </a>
+                <div class="navbar-dropdown">
+                  <a href="team.html" class="navbar-item">Team</a>
+                  <a href="testimonials.html" class="navbar-item">Testimonials</a>
+                  
+                  <div class="navbar-item has-dropdown is-hoverable">
+                    <a href="#" class="navbar-link">Deep Dropdown</a>
+                    <div class="navbar-dropdown">
+                      <a href="#" class="navbar-item">Deep Dropdown 1</a>
+                      <a href="#" class="navbar-item">Deep Dropdown 2</a>
+                      <a href="#" class="navbar-item">Deep Dropdown 3</a>
+                      <a href="#" class="navbar-item">Deep Dropdown 4</a>
+                      <a href="#" class="navbar-item">Deep Dropdown 5</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+      
+              <a href="services.html" class="navbar-item">Services</a>
+              <a href="portfolio.html" class="navbar-item">Portfolio</a>
+              <a href="pricing.html" class="navbar-item">Pricing</a>
+              <a href="blog.html" class="navbar-item">Blog</a>
+              <a href="contact.html" class="navbar-item">Contact</a>
+
+              <div class="navbar-item">
+                <div class="buttons">
+                  <a href="#" class="button is-light">
+                    <span class="icon">
+                      <i class="bi bi-twitter-x"></i>
+                    </span>
+                  </a>
+                  <a href="#" class="button is-light">
+                    <span class="icon">
+                      <i class="bi bi-facebook"></i>
+                    </span>
+                  </a>
+                  <a href="#" class="button is-light">
+                    <span class="icon">
+                      <i class="bi bi-instagram"></i>
+                    </span>
+                  </a>
+                  <a href="#" class="button is-light">
+                    <span class="icon">
+                      <i class="bi bi-linkedin"></i>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
 </body>
+
+<section class="carousel">
+    <div class="carousel-container">
+        <div class="carousel">
+          <div class="carousel-item is-active">
+            <figure class="image is-16by9">
+              <img src="https://via.placeholder.com/800x450" alt="Slide 1">
+            </figure>
+          </div>
+          <div class="carousel-item">
+            <figure class="image is-16by9">
+              <img src="https://via.placeholder.com/800x450" alt="Slide 2">
+            </figure>
+          </div>
+          <div class="carousel-item">
+            <figure class="image is-16by9">
+              <img src="https://via.placeholder.com/800x450" alt="Slide 3">
+            </figure>
+          </div>
+        </div>
+        
+        <div class="carousel-nav">
+          <a class="nav-item nav-previous">
+            <span class="icon">
+              <i class="fas fa-chevron-left"></i>
+            </span>
+          </a>
+          <div class="nav-indicators">
+            <span class="indicator is-active"></span>
+            <span class="indicator"></span>
+            <span class="indicator"></span>
+          </div>
+          <a class="nav-item nav-next">
+            <span class="icon">
+              <i class="fas fa-chevron-right"></i>
+            </span>
+          </a>
+        </div>
+      </div>
+</section>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const carousel = document.querySelector('.carousel');
+      const items = carousel.querySelectorAll('.carousel-item');
+      const indicators = document.querySelectorAll('.indicator');
+      const prevButton = document.querySelector('.nav-previous');
+      const nextButton = document.querySelector('.nav-next');
+      let currentIndex = 0;
+    
+      function updateCarousel() {
+        items.forEach(item => item.classList.remove('is-active'));
+        indicators.forEach(indicator => indicator.classList.remove('is-active'));
+        
+        items[currentIndex].classList.add('is-active');
+        indicators[currentIndex].classList.add('is-active');
+      }
+    
+      function nextSlide() {
+        currentIndex = (currentIndex + 1) % items.length;
+        updateCarousel();
+      }
+    
+      function previousSlide() {
+        currentIndex = (currentIndex - 1 + items.length) % items.length;
+        updateCarousel();
+      }
+    
+      // Event Listeners
+      nextButton.addEventListener('click', nextSlide);
+      prevButton.addEventListener('click', previousSlide);
+    
+      indicators.forEach((indicator, index) => {
+        indicator.addEventListener('click', () => {
+          currentIndex = index;
+          updateCarousel();
+        });
+      });
+    
+      // Optional: Auto-play
+      setInterval(nextSlide, 5000);
+    });
+    </script><script>
+document.addEventListener('DOMContentLoaded', () => {
+  const carousel = document.querySelector('.carousel');
+  const items = carousel.querySelectorAll('.carousel-item');
+  const indicators = document.querySelectorAll('.indicator');
+  const prevButton = document.querySelector('.nav-previous');
+  const nextButton = document.querySelector('.nav-next');
+  let currentIndex = 0;
+
+  function updateCarousel() {
+    items.forEach(item => item.classList.remove('is-active'));
+    indicators.forEach(indicator => indicator.classList.remove('is-active'));
+    
+    items[currentIndex].classList.add('is-active');
+    indicators[currentIndex].classList.add('is-active');
+  }
+
+  function nextSlide() {
+    currentIndex = (currentIndex + 1) % items.length;
+    updateCarousel();
+  }
+
+  function previousSlide() {
+    currentIndex = (currentIndex - 1 + items.length) % items.length;
+    updateCarousel();
+  }
+
+  // Event Listeners
+  nextButton.addEventListener('click', nextSlide);
+  prevButton.addEventListener('click', previousSlide);
+
+  indicators.forEach((indicator, index) => {
+    indicator.addEventListener('click', () => {
+      currentIndex = index;
+      updateCarousel();
+    });
+  });
+
+  // Optional: Auto-play
+  setInterval(nextSlide, 5000);
+});
+</script>
 </html>

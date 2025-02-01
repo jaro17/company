@@ -1,5 +1,12 @@
 @import "https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css";
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
-h1 {
-    color: red;
+* {
+  font-family: 'Nunito', sans-serif;
 }
+
+.navbar-item {
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
