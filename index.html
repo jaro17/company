@@ -5,76 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Company</title>
     <link rel="stylesheet" href="./public/css/main.css">
+    <link rel="stylesheet" href="./public/css//carousel.css">
+    <script src="https://kit.fontawesome.com/bd7178b60d.js" crossorigin="anonymous"></script>
     <style>
-        .carousel-container {
-          position: relative;
-          width: 100%;
-          max-width: 800px;
-          margin: 0 auto;
-          overflow: hidden;
-        }
-        
-        .carousel {
-          display: flex;
-          transition: transform 0.5s ease-in-out;
-        }
-        
-        .carousel-item {
-          flex: 0 0 100%;
-          display: none;
-        }
-        
-        .carousel-item.is-active {
-          display: block;
-        }
-        
-        .carousel-nav {
-          position: absolute;
-          bottom: 20px;
-          left: 0;
-          right: 0;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          gap: 1rem;
-        }
-        
-        .nav-item {
-          background: rgba(255, 255, 255, 0.7);
-          border-radius: 50%;
-          width: 40px;
-          height: 40px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          cursor: pointer;
-          transition: background-color 0.3s;
-        }
-        
-        .nav-item:hover {
-          background: rgba(255, 255, 255, 0.9);
-        }
-        
-        .nav-indicators {
-          display: flex;
-          gap: 0.5rem;
-        }
-        
-        .indicator {
-          width: 10px;
-          height: 10px;
-          border-radius: 50%;
-          background: rgba(255, 255, 255, 0.5);
-          cursor: pointer;
-        }
-        
-        .indicator.is-active {
-          background: white;
-        }
+      
         </style>
 </head>
 <body>
-    <header class="navbar is-fixed-top py-4" style="background-color: antiquewhite;">
+    <header class="navbar is-fixed-top py-4 has-shadow">
         <div class="container">
           <div class="navbar-brand">
             <a href="index.html" class="navbar-item">
@@ -96,7 +34,7 @@
             </div>
       
             <div class="navbar-end">
-                <a href="#hero" class="navbar-item is-active">Home</a>
+                <a href="#hero" class="navbar-item">Home</a>
               
               <div class="navbar-item has-dropdown is-hoverable">
                 <a href="about.html" class="navbar-link">
@@ -127,24 +65,24 @@
 
               <div class="navbar-item">
                 <div class="buttons">
-                  <a href="#" class="button is-light">
-                    <span class="icon">
-                      <i class="bi bi-twitter-x"></i>
+                  <a href="#">
+                    <span class="icon mr-2">
+                        <i class="font-icon fa-brands fa-square-x-twitter"></i>
                     </span>
                   </a>
-                  <a href="#" class="button is-light">
-                    <span class="icon">
-                      <i class="bi bi-facebook"></i>
+                  <a href="#">
+                    <span class="icon mr-2">
+                        <i class="font-icon fa-brands fa-facebook"></i>
                     </span>
                   </a>
-                  <a href="#" class="button is-light">
-                    <span class="icon">
-                      <i class="bi bi-instagram"></i>
+                  <a href="#">
+                    <span class="icon mr-2">
+                        <i class="font-icon fa-brands fa-square-instagram"></i>
                     </span>
                   </a>
-                  <a href="#" class="button is-light">
+                  <a href="#">
                     <span class="icon">
-                      <i class="bi bi-linkedin"></i>
+                        <i class="font-icon fa-brands fa-linkedin"></i>
                     </span>
                   </a>
                 </div>
@@ -160,18 +98,33 @@
         <div class="carousel">
           <div class="carousel-item is-active">
             <figure class="image is-16by9">
-              <img src="https://via.placeholder.com/800x450" alt="Slide 1">
+              <img src="./public/images/hero-carousel/hero-carousel-1.jpg" alt="Slide 1" style="width: 100%; height: 100vh; object-fit: cover;">
             </figure>
+            <div class="container content-overlay">
+                <h2>At vero eos et accusamus</h2>
+                <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut.</p>
+                <a href="./templates/about.html" class="btn-get-started">Read More</a>
+              </div>
           </div>
           <div class="carousel-item">
             <figure class="image is-16by9">
-              <img src="https://via.placeholder.com/800x450" alt="Slide 2">
+              <img src="./public/images/hero-carousel/hero-carousel-2.jpg" alt="Slide 2" style="width: 100%; height: 100vh; object-fit: cover;">
             </figure>
+            <div class="container content-overlay">
+                <h2>We are professional</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <a href="./templates/about.html" class="btn-get-started">Read More</a>
+              </div>
           </div>
           <div class="carousel-item">
             <figure class="image is-16by9">
-              <img src="https://via.placeholder.com/800x450" alt="Slide 3">
+              <img src="./public/images/hero-carousel/hero-carousel-3.jpg" alt="Slide 3" style="width: 100%; height: 100vh; object-fit: cover;">
             </figure>
+            <div class="container content-overlay">
+                <h2>Temporibus autem quibusdam</h2>
+                <p>Beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt omnis iste natus error sit voluptatem accusantium.</p>
+                <a href="./templates/about.html" class="btn-get-started">Read More</a>
+              </div>
           </div>
         </div>
         

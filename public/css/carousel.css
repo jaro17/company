@@ -1,0 +1,138 @@
+.carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.carousel-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+    z-index: 1;
+}
+
+.carousel-item.is-active {
+    opacity: 1;
+    z-index: 2;
+}
+
+.carousel-nav {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  z-index: 3;
+}
+
+.carousel-container .container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+  z-index: 2;
+  background-color: lightgray transparent;
+}
+
+.carousel-container .container h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.carousel-container .container p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.carousel-container .container .btn-get-started {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background-color: transparent;
+  color: #fff;
+  text-decoration: none;
+  border: 1px solid #1BBD36;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.container.content-overlay {
+    background-color: rgba(100, 91, 91, 0.7); /* Light grey with 70% opacity */
+    padding: 2rem;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 3;
+    bottom: 6rem;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 800px; /* Optional: limit the width */
+  }
+  
+  /* Optional: Make text more readable */
+  .content-overlay h2 {
+    color: #fff;;
+    margin-bottom: 1rem;
+  }
+  
+  .content-overlay p {
+    color: #fff;
+    margin-bottom: 1.5rem;
+  }
+
+<!-- .carousel-container .container .btn-get-started:hover {
+  background-color: #1BBD36;
+} -->
+
+a.nav-item.nav-previous, a.nav-item.nav-next {
+background-color: transparent;
+color: #1BBD36;
+}
+
+.nav-item {
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.nav-item:hover {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.nav-indicators {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+}
+
+.indicator.is-active {
+  background: white;
+}

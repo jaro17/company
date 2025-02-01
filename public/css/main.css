@@ -10,3 +10,35 @@
   font-weight: 600;
 }
 
+.navbar-item:hover {
+  color: #1BBD36;
+  background-color: transparent;
+}
+
+.navbar-item:active {
+  color: #1BBD36;
+  background-color: transparent;
+  padding: 0;
+}
+.navbar-item:focus {
+  color: #1BBD36;
+  background-color: transparent;
+}
+
+.button {
+    border: none;
+    outline: none;
+}
+
+.icon {
+    background-color: transparent;
+}
+
+.font-icon {
+  font-size: 3rem;
+  color: #000;
+}
+
+.font-icon:hover {
+  color: #1BBD36;
+}
